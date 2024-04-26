@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    gap: 3rem;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.menu {
+    gap: 3rem;
+    display: none;
+}
+
+nav button {
+    display: none;
+}
+
+.menu li a.active,
+.menu li a:hover {
+    text-shadow: 0 0 .5px black;
+}
+
+button {
+    padding: .7rem 2rem;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+header {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+header,
+section,
+.pricing {
+    padding: 3rem 8%;
+}
+
+header>div {
+    flex: 1;
+}
+
+header img {
+    width: 100%;
+}
+
+header .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header .left p {
+    width: 70%;
+}
+
+header .right {
+    display: none;
+}
+
+p {
+    color: #575455;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.features h6 {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.features img {
+    width: auto;
+    height: 18px;
+}
+
+.features div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.showcase {
+    text-align: center;
+}
+
+.showcase h6,
+.pricing h6 {
+    color: #F75C4E;
+}
+
+.showcase>p {
+    width: 60%;
+    margin: auto;
+}
+
+.showcase-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.showcase-cards .card {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.showcase-cards .card img {
+    width: 40px;
+}
+
+.showcase-cards .card p {
+    width: 65%;
+}
+
+h2 {
+    margin: .5rem 0 1rem;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+.pricing .right {
+    text-align: center;
+    width: 60%;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.email input {
+    height: 37.5px;
+    border: none;
+    outline: none;
+    background-color: #F5F6FB;
+    padding: 0 2rem;
+    border-radius: 45px;
+}
+
+.pricing img {
+    width: 100%;
+}
+
+
+
+header .left button,
+.email button {
+    color: white;
+    background-color: #1F7CFF;
+}
+
+.email button {
+    position: relative;
+    width: 100%;
+}
+
+.email input::placeholder {
+    color: #575455;
+}
+
+/* tablet  576px -- 992px */
+/* mobile  320px -- 576px */
+
+/* tab */
+@media screen and (min-width: 576px) {
+    .menu {
+        display: none;
+    }
+
+    nav button {
+        display: block;
+    }
+
+    header .left {
+        text-align: center;
+        align-items: center;
+    }
+
+    .features {
+        align-items: center;
+    }
+
+    .showcase-cards .card {
+        width: 45%;
+    }
+
+    .pricing .right {
+        text-align: center;
+        width: 60%;
+    }
+
+    .email {
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
+    }
+
+    .email input {
+        width: 180%;
+    }
+
+    .email button {
+        left: -10%;
+    }
+}
+
+/* big */
+@media (min-width: 992px) {
+    h1 {
+        text-align: left;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+
+    header .left {
+        align-items: flex-start;
+        text-align: left !important;
+    }
+
+    header .right {
+        display: block;
+    }
+
+    .features {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .features h6 {
+        flex-direction: column !important;
+    }
+
+    .showcase-cards .card {
+        width: 30%;
+    }
+
+    .pricing {
+        flex-direction: row;
+    }
+
+    .pricing .right {
+        width: 100%;
+    }
+}
